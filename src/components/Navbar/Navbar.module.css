@@ -1,0 +1,45 @@
+.Navbar {
+    background-color: #34c94b;
+    height: 74px;
+    padding: 0px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.SearchContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:#FFFFFF    ;
+    border: 1px solid;
+    border-radius: 8px;
+}
+.Search {
+    width: 568px;
+    height: 48px;
+    border-radius: 8px 0px 0px 8px;
+    font-size: 16px;
+    line-height:19.2px;
+    padding: 0 16px;
+}
+.SearchIcon {    
+    border-radius: 0px 8px 8px 0px;
+    padding: 0 24px;
+    width: 20px;
+
+}
+
+.FeedbackButton{
+    background-color: #121212;
+    color: #34C94B;
+   border-radius: 12px;
+   border: 1px solid #34C94B;
+   padding: 8px 32px;
+   /* font-family: "Poppins"; */
+   font-size: 18px;
+   font-weight: 600;
+   line-height: 27px;
+   letter-spacing: 0.25px;
+   text-align: center;
+   
+}
