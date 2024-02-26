@@ -8,7 +8,8 @@ function App() {
     <div className="app-container">
         <Navbar/>
         <HeroSection/>
-        <AlbumSection/>
+        <AlbumSection title={"Top Albums"} apiUrl='https://qtify-backend-labs.crio.do/albums/top'/>
+        <AlbumSection title={"New Albums"} apiUrl='https://qtify-backend-labs.crio.do/albums/new'/>
     </div>
   );
 }

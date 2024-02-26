@@ -8,14 +8,14 @@ import Stack from '@mui/material/Stack';
 import AlbumCard from '../Card/AlbumCard'; 
 import styles from "./AlbumSection.module.css";
 
-const AlbumSection = () => {
+const AlbumSection = ({title,apiUrl='https://qtify-backend-labs.crio.do/albums/top'}) => {
   const [topAlbums, setTopAlbums] = useState([]);
   const [isCollapsed, setIsCollapsed] = useState(false);
 
   useEffect(() => {
     const fetchTopAlbums = async () => {
       try {
-        const response = await axios.get('https://qtify-backend-labs.crio.do/albums/top');
+        const response = await axios.get(apiUrl);
         setTopAlbums(response.data);
       } catch (error) {
         console.error('Error fetching top albums:', error);
@@ -32,8 +32,9 @@ const AlbumSection = () => {
   return (
     <div className={styles.AlbumSection} >
     <Stack direction={"row"} justifyContent={"space-between"}>
-      <Typography variant="h4" component="div" sx={{ marginBottom: 2 }}>
-        Top Albums
+      <Typography variant="h5" component="div" sx={{ marginBottom: 2 }}>
+        
+        {title}
       </Typography>
         <Button onClick={handleCollapse} color="primary" sx={{color:"#34C94B"}}>
           {isCollapsed ? 'Expand' : 'Collapse'}
