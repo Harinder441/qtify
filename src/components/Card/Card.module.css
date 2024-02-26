@@ -1,16 +1,13 @@
 .AlbumCardContainer{
-    display: flex;
-    flex-direction: column;
     background-color: #121212;
     width: 10rem;
-    height: 15rem;
 }
 .AlbumCard{
-    height: 100%;
     background-color: #FFFFFF;
     border-radius: 10px;
     
 }
+
 .AlbumCardImage{
     width: 100%;
     height: 80%;

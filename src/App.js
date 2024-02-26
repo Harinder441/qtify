@@ -2,13 +2,13 @@ import logo from './logo.svg';
 import './App.css';
 import Navbar from './components/Navbar/Navbar';
 import HeroSection from './components/HeroSection/HeroSection';
-import AlbumCard from './components/Card/AlbumCard';
+import AlbumSection from './components/AlbumSection/AlbumSection';
 function App() {
   return (
-    <div>
+    <div className="app-container">
         <Navbar/>
         <HeroSection/>
-        <AlbumCard/>
+        <AlbumSection/>
     </div>
   );
 }
