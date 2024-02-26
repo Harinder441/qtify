@@ -2,25 +2,25 @@
     position: relative;
 }
 
-.leftNavigation{
+.navigation{
     cursor: pointer;
     position: absolute;
+    z-index: 10;
+    background: none;
+    padding: 0;
+    border: none;
+}
+.leftNavigation{
     left:0;
     top:40%;
     transform: translateY(-50%);
-    z-index: 10;
-    background: none;
 
 }
 
 .rightNavigation{
-    cursor: pointer;
-    position: absolute;
     right:10px;
     top:40%;
     transform: translateY(-50%);
-    z-index: 10;   
-     background: none;
 
 
 }

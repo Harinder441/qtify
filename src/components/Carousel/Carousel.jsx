@@ -26,16 +26,29 @@ export default function Carousel({ Items }) {
         }}
         modules={[Navigation]}
         className="mySwiper"
-        spaceBetween={40}
-        slidesPerView={6}
+        breakpoints={{
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 40,
+          },
+          640: {
+            slidesPerView: 4,
+            spaceBetween: 24,
+          },
+          1024: {
+            slidesPerView: 6,
+            spaceBetween: 16,
+          },
+          
+        }}
       >
         {Items.map((Item, index) => (
           <SwiperSlide key={index}>{Item}</SwiperSlide>
         ))}
-        <button className={"image-swiper-button-prev "+styles.leftNavigation}>
+        <button className={"image-swiper-button-prev "+styles.navigation+" "+styles.leftNavigation}>
           <img src={LeftArrow} />
         </button>
-        <button className={"image-swiper-button-next "+styles.rightNavigation}>
+        <button className={"image-swiper-button-next "+styles.navigation+" "+styles.rightNavigation}>
           <img src={RightArrow} />
         </button>
       </Swiper>

@@ -52,7 +52,7 @@ const AlbumSection = ({ title, apiUrl = "https://qtify-backend-labs.crio.do/albu
       <Collapse in={isCollapsed}>
         <Carousel
           Items={topAlbums.map((album) => (
-            <div key={album.id} style = {{width:"15vw"}}>
+            <div key={album.id} style = {{}}>
               <AlbumCard  imageUrl={album.image} follows={album.follows} albumName={album.title} />
 
             </div>
