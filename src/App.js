@@ -10,6 +10,7 @@ function App() {
         <HeroSection/>
         <AlbumSection title={"Top Albums"} apiUrl='https://qtify-backend-labs.crio.do/albums/top'/>
         <AlbumSection title={"New Albums"} apiUrl='https://qtify-backend-labs.crio.do/albums/new'/>
+        <AlbumSection title={"Songs"} apiUrl='https://qtify-backend-labs.crio.do/songs' type="song"/>
     </div>
   );
 }

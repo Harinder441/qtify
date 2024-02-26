@@ -8,18 +8,18 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import Chip from "@mui/material/Chip";
 
-const AlbumCard = ({ imageUrl, albumName, follows }) => {
+const AlbumCard = ({ data,type}) => {
   return (
     <Paper sx={{ backgroundColor: "#121212", padding: 1, color: "#FFFFFF" }} elevation={0}>
       <Card sx={{ borderRadius: "10px" }}>
-        <CardMedia component="img" height={200} image={imageUrl} alt={albumName} />
+        <CardMedia component="img" height={200} image={data.image} alt={data.title} />
 
         <CardActionArea>
-          <Chip label={`${follows} Follows`} sx={{ marginTop: 1, marginBottom: 1, marginLeft: 1, backgroundColor: "#121212", color: "#FFFFFF" }} />
+          <Chip label={type==="song"?`${data.likes} Likes`:`${data.follows} Follows`} sx={{ marginTop: 1, marginBottom: 1, marginLeft: 1, backgroundColor: "#121212", color: "#FFFFFF" }} />
         </CardActionArea>
       </Card>
       <Typography variant="subtitle1" component="div">
-        {albumName}
+        {data.title}
       </Typography>
     </Paper>
   );
